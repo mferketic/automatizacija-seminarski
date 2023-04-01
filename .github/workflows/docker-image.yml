@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t mferketic/automatizacija-seminarski:latest .
+        run: docker build -t mferketic/automatizacija-seminarski:$(date +%s) .
 
       - name: Push Docker image
-        run: docker push mferketic/automatizacija-seminarski:latest
+        run: docker push mferketic/automatizacija-seminarski
