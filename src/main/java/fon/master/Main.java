@@ -1,7 +1,13 @@
 package fon.master;
 
+import fon.master.calculator.CalculatorUtil;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello Docker Hub finally!");
+        CalculatorUtil calculatorUtil = new CalculatorUtil(10,2);
+        System.out.println("Sabiranje: " + calculatorUtil.addition());
+        System.out.println("Oduzimanje: " + calculatorUtil.subtraction());
+        System.out.println("Mnozenje: " + calculatorUtil.multiplication());
+        System.out.println("Deljenje: " + calculatorUtil.division());
     }
 }
